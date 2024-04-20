@@ -9,8 +9,9 @@ namespace MyerSplashShared.Service
 {
     public class HighlightImageService : ImageServiceBase
     {
-        private static DateTime END_TIME => DateTime.Parse("2017/03/20");
-        private static int COUNT => 20;
+        private static DateTime END_TIME => DateTime.Parse("2021/12/31");
+        private static DateTime START_TIME => DateTime.Parse("2017/03/20");
+        private static int COUNT => 1747;
 
         public HighlightImageService(UnsplashImageFactory factory,
             CancellationTokenSourceFactory ctsFactory) : base(factory, ctsFactory)
@@ -21,16 +22,18 @@ namespace MyerSplashShared.Service
         {
             var list = new ObservableCollection<UnsplashImage>();
 
-            var start = DateTime.Now.AddDays(-(Page - 1) * COUNT);
+            var date = DateTime.Parse("2021/12/31");
+
+            var start = date.AddDays(-(Page - 1) * COUNT);
 
             for (var i = 0; i < COUNT; i++)
             {
                 var next = start.AddDays(-i);
-                if (next < END_TIME)
+                if (next < START_TIME)
                 {
                     break;
                 }
-                list.Add(UnsplashImageFactory.CreateHighlightImage(next, true));
+                    list.Add(UnsplashImageFactory.CreateHighlightImage(next, true));
             }
 
             return await Task.FromResult(list);
