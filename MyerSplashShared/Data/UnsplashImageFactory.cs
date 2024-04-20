@@ -46,8 +46,7 @@ namespace MyerSplash.Data
             var array = JsonArray.Parse(json);
             foreach (var item in array)
             {
-                var coverPhoto = JsonParser.GetJsonObjFromJsonObj(item, "cover_photo");
-                var image = JsonConvert.DeserializeObject<UnsplashImage>(coverPhoto.ToString());
+                var image = JsonConvert.DeserializeObject<UnsplashImage>(item.ToString());
                 list.Add(image);
             }
             return list;

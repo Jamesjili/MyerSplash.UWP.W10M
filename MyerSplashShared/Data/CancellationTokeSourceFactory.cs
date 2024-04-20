@@ -19,9 +19,9 @@ namespace MyerSplashShared.Data
 
     public class DefaultCancellationTokeSourceFactory : CancellationTokenSourceFactory
     {
-        private readonly int _cancelDelayMillis = 5000;
+        private readonly int _cancelDelayMillis = 10000;
 
-        internal DefaultCancellationTokeSourceFactory(int cancelDelayMillis = 5000)
+        internal DefaultCancellationTokeSourceFactory(int cancelDelayMillis = 10000)
         {
             _cancelDelayMillis = cancelDelayMillis;
         }
