@@ -8,10 +8,10 @@ You can also search in Windows Store or visit [this](https://www.microsoft.com/e
 Thanks to JuniperPhoton for created this application.
 
 ## Introduction
-An UWP app that allows you to browse and download high-quality wallpaper from Unsplash.com.
+An UWP app that allows you to browse and download high-quality wallpaper from Unsplash.com
 
 ## Building
-Make sure you are using Visual Studio 2017 and install the Build 15063 SDK to build project.
+Make sure you are using Visual Studio 2017 and install the Build 15063 SDK to build the project.
 
 ## License 
 The project is released under MIT License.
