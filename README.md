@@ -16,4 +16,4 @@ Make sure you are using Visual Studio 2017 and install the Build 15063 SDK to bu
 ## License 
 The project is released under MIT License.
 
-Copyright (c) 2024 JuniperPhoton & Jamesjili
+Copyright (c) 2024 JuniperPhoton
